@@ -42,8 +42,8 @@ void loop() {
 
 #ifndef PLOTTER_FORMAT
   Serial.print("measurements started\n");
-  delay(1000);
 #endif /* PLOTTER_FORMAT */
+  delay(1000);
 
   do {
     ret = sps30_read_data_ready(&data_ready);
