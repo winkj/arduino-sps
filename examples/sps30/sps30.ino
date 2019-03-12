@@ -8,6 +8,10 @@
 // #define PLOTTER_FORMAT
 
 void setup() {
+  s16 ret;
+  u8 auto_clean_days = 4;
+  u32 auto_clean;
+
   Serial.begin(9600);
   delay(2000);
   
@@ -19,16 +23,7 @@ void setup() {
 #ifndef PLOTTER_FORMAT
   Serial.print("SPS sensor probing successful\n");
 #endif /* PLOTTER_FORMAT */
-}
 
-void loop() {
-  struct sps30_measurement m;
-  char serial[SPS_MAX_SERIAL_LEN];
-  u8 auto_clean_days = 4;
-  u32 auto_clean;
-  u16 data_ready;
-  s16 ret;
-  
   ret = sps30_set_fan_auto_cleaning_interval_days(auto_clean_days);
   if (ret) {
     Serial.print("error setting the auto-clean interval: ");
@@ -44,6 +39,13 @@ void loop() {
   Serial.print("measurements started\n");
 #endif /* PLOTTER_FORMAT */
   delay(1000);
+}
+
+void loop() {
+  struct sps30_measurement m;
+  char serial[SPS_MAX_SERIAL_LEN];
+  u16 data_ready;
+  s16 ret;
 
   do {
     ret = sps30_read_data_ready(&data_ready);
