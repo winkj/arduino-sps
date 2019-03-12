@@ -22,6 +22,7 @@ If you check the serial monitor window, you should see something like this:
 
 1. Open the example from ```File > Examples > arduino-sps > sps30```. 
 1. Open the serial plotter from the Tools menu
+1. Uncomment line 8 of the sample program; it should now read ```#define PLOTTER_FORMAT```
 1. Press the "Upload" button to compile and upload the sketch
 
 If you check the serial plotter window, you should see something like this:
