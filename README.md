@@ -1,6 +1,4 @@
-# arduino-sps - Arduino library for the SPS30 particulate matter sensor
-
-Arduino library for Sensirion SPS30
+# Arduino library for the SPS30 particulate matter sensor
 
 To learn more about the SPS30, please visit https://www.sensirion.com/sps30/. For support questions on the SPS30, please visit https://sensirion.com/contact.
 
