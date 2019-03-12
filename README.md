@@ -6,9 +6,9 @@ This library is using the code from Sensirion's [embedded-sps](https://github.co
 
 Most notably, this is using an alternative [I2C Master Library](https://github.com/DSSCircuits/I2C-Master-Library) to work around the I2C buffer size limit that exists on certain Arduino platform, including the Arduino Uno series.
 
-# Usage
+## Usage
 
-## Serial Monitor (Text output)
+### Serial Monitor (Text output)
 
 1. Open the example from ```File > Examples > arduino-sps > sps30```. 
 1. Open the serial monitor from the Tools menu
@@ -18,7 +18,7 @@ If you check the serial monitor window, you should see something like this:
 
 ![Serial monitor](doc/sps30-arduino-serial-monitor.jpg)
 
-## Serial Plotter (Graphical output)
+### Serial Plotter (Graphical output)
 
 1. Open the example from ```File > Examples > arduino-sps > sps30```. 
 1. Open the serial plotter from the Tools menu (if you have the serial monitor open, you'll need to close it first)
